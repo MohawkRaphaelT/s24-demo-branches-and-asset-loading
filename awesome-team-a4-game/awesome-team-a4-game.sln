@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34723.18
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "awesome-team-a4-game", "awesome-team-a4-game.csproj", "{7A04B987-56B2-47DA-9760-AAAA4CB48569}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A04B987-56B2-47DA-9760-AAAA4CB48569}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A04B987-56B2-47DA-9760-AAAA4CB48569}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A04B987-56B2-47DA-9760-AAAA4CB48569}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A04B987-56B2-47DA-9760-AAAA4CB48569}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32A0EF63-0A06-4C3C-B9E2-9ACC234D52CC}
+	EndGlobalSection
+EndGlobal
