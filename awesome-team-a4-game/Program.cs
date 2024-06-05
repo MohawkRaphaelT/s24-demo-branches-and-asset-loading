@@ -9,12 +9,16 @@ public class Program
     static int screenHeight = 600; // Screen height
     static int targetFps = 60; // Target frames-per-second
 
+    static Sound sfx;
+
     static void Main()
     {
         // Create a window to draw to. The arguments define width and height
         Raylib.InitWindow(screenWidth, screenHeight, title);
         // Set the target frames-per-second (FPS)
         Raylib.SetTargetFPS(targetFps);
+        // Prepare sound system
+        Raylib.InitAudioDevice();
         // Setup your game. This is a function YOU define.
         Setup();
         // Loop so long as window should not close
@@ -41,5 +45,18 @@ public class Program
     static void Update()
     {
         // Your game code run each frame here
+    }
+
+    static void LoadSFX()
+    {
+        sfx = Raylib.LoadSound("../../../../assets/audio/target.ogg");
+    }
+
+    static void PlaySFX()
+    {
+        if (Raylib.IsKeyPressed(KeyboardKey.Space))
+        {
+            Raylib.PlaySound(sfx);
+        }
     }
 }
