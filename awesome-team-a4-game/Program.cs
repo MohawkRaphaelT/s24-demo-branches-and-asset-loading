@@ -57,4 +57,17 @@ public class Program
         int y = Raylib.GetMouseY();
         Raylib.DrawTexture(asteroid, x, y, Color.White);
     }
+
+    static void LoadSFX()
+    {
+        sfx = Raylib.LoadSound("../../../../assets/audio/target.ogg");
+    }
+
+    static void PlaySFX()
+    {
+        if (Raylib.IsKeyPressed(KeyboardKey.Space))
+        {
+            Raylib.PlaySound(sfx);
+        }
+    }
 }
