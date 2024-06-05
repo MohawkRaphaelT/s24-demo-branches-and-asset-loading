@@ -37,8 +37,13 @@ public class Program
 
     static void Setup()
     {
+        // Figure out here we are running from
+        //string cwd = Directory.GetCurrentDirectory();
+        //Console.WriteLine($"Where are we runnign from? {cwd}");
+
         // Your one-time setup code here
-        string path = "C:/Users/Raphael/source/repos/s24-demo-branches-and-asset-loading/assets/graphics/asteroid.png";
+        // Get out of net8.0, Debug, bin, VS project, then go into assets
+        string path = "../../../../assets/graphics/asteroid.png";
         Image image = Raylib.LoadImage(path);
         asteroid = Raylib.LoadTextureFromImage(image);
         Raylib.UnloadImage(image);
