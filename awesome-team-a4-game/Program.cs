@@ -10,6 +10,7 @@ public class Program
     static int targetFps = 60; // Target frames-per-second
 
     static Texture2D asteroid;
+    static Sound sfx;
 
     static void Main()
     {
