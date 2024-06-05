@@ -9,6 +9,8 @@ public class Program
     static int screenHeight = 600; // Screen height
     static int targetFps = 60; // Target frames-per-second
 
+    static Texture2D asteroid;
+
     static void Main()
     {
         // Create a window to draw to. The arguments define width and height
@@ -36,10 +38,17 @@ public class Program
     static void Setup()
     {
         // Your one-time setup code here
+        string path = "C:/Users/Raphael/source/repos/s24-demo-branches-and-asset-loading/assets/graphics/asteroid.png";
+        Image image = Raylib.LoadImage(path);
+        asteroid = Raylib.LoadTextureFromImage(image);
+        Raylib.UnloadImage(image);
     }
 
     static void Update()
     {
         // Your game code run each frame here
+        int x = Raylib.GetMouseX();
+        int y = Raylib.GetMouseY();
+        Raylib.DrawTexture(asteroid, x, y, Color.White);
     }
 }
