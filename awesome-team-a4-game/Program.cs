@@ -1,5 +1,6 @@
 ﻿using Raylib_cs;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 public class Program
 {
@@ -18,6 +19,8 @@ public class Program
         Raylib.InitWindow(screenWidth, screenHeight, title);
         // Set the target frames-per-second (FPS)
         Raylib.SetTargetFPS(targetFps);
+        // Enable audio
+        Raylib.InitAudioDevice();
         // Setup your game. This is a function YOU define.
         Setup();
         // Loop so long as window should not close
@@ -32,6 +35,8 @@ public class Program
             // Stop drawing to the canvas, begin displaying the frame
             Raylib.EndDrawing();
         }
+        // Stop audio
+        Raylib.CloseAudioDevice();
         // Close the window
         Raylib.CloseWindow();
     }
@@ -48,6 +53,8 @@ public class Program
         Image image = Raylib.LoadImage(path);
         asteroid = Raylib.LoadTextureFromImage(image);
         Raylib.UnloadImage(image);
+
+        LoadSFX();
     }
 
     static void Update()
@@ -56,11 +63,14 @@ public class Program
         int x = Raylib.GetMouseX();
         int y = Raylib.GetMouseY();
         Raylib.DrawTexture(asteroid, x, y, Color.White);
+
+        PlaySFX();
     }
 
     static void LoadSFX()
     {
-        sfx = Raylib.LoadSound("../../../../assets/audio/target.ogg");
+        string path = "../../../../assets/audio/target.ogg";
+        sfx = Raylib.LoadSound(path);
     }
 
     static void PlaySFX()
