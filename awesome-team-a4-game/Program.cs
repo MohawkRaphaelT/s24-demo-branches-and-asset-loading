@@ -29,7 +29,7 @@ public class Program
             // Enable drawing to the canvas (window)
             Raylib.BeginDrawing();
             // Clear the canvas with one color
-            Raylib.ClearBackground(Color.RayWhite);
+            Raylib.ClearBackground(Color.Yellow);
             // Your game code here. This is a function YOU define.
             Update();
             // Stop drawing to the canvas, begin displaying the frame
